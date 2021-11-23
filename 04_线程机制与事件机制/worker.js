@@ -1,7 +1,7 @@
 function fibonacci(n) {
   return n<=2 ? 1 : fibonacci(n-1) + fibonacci(n-2)  //递归调用
 }
-
+// 分线程中的全局对象不再是window, 所以在分线程中不可能更新界面
 console.log(this)
 this.onmessage = function (event) {
   var number = event.data
